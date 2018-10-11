@@ -11,7 +11,7 @@
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="main">
 <div class="container" >
     <div class="well">
         <h1 style="text-align:center">MEMBER DETAILS</h1>
