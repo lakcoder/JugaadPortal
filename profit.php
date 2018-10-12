@@ -37,7 +37,7 @@
     <tbody>
     <?php
 
-    $conn=mysqli_connect("localhost:3306", "vipul2","Ecellvnit123@","jugaad");
+    $conn=mysqli_connect("localhost:3306", "jugaad","VNIT@123","Jugaad18");
     $result=mysqli_query($conn, "SELECT * FROM profit");
 
     while ($row = mysqli_fetch_assoc($result)):

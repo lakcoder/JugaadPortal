@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
 $servername = "localhost:3306";
-$username="vipul2";
-$password="Ecellvnit123@";
-$dbname="jugaad";
+$username="jugaad";
+$password="VNIT@123";
+$dbname="Jugaad18";
 
 $NAME="";
 $COLLEGE="";
@@ -92,7 +92,7 @@ fclose($fh);
 
 // sql to create table
 $sql = "CREATE TABLE $UNIQUE (
-ID INT(6) AUTO_INCREMENT PRIMARY KEY, 
+ID INT(6) AUTO_INCREMENT PRIMARY KEY,
 DETAILS VARCHAR(255) NOT NULL,
 INFLOW VARCHAR(255) NOT NULL,
 OUTFLOW VARCHAR(255) NOT NULL,

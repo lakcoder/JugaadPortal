@@ -47,7 +47,7 @@ $body = "You have received a new message from your website contact form.\n\n"."H
 $host = "ssl://sharedlinux.cloudhostdns.net";
 $port = "465";
 $username = "noreply@ecellvnit.org";          //your mail id
-$password = "Ecellvnit123@";                      //password of this mail id
+$password = "VNIT@123";                      //password of this mail id
 
 $headers = array ('From' => $from,
 'To' => $to,
@@ -78,7 +78,7 @@ $body = "Thank You $name for Contacting us.\n\nWe will surely contact you soon.\
 $host = "ssl://sharedlinux.cloudhostdns.net";
 $port = "465";
 $username = "noreply@ecellvnit.org";          //your mail id
-$password = "Ecellvnit123@";                      //password of this mail id
+$password = "VNIT@123";                      //password of this mail id
 
 $headers = array ('From' => $from,
 'To' => $to,

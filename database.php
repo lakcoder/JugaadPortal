@@ -39,8 +39,11 @@
 
     <tbody>
         <?php
-
-        $conn=mysqli_connect("localhost:3306", "vipul2","Ecellvnit123@","jugaad");
+        $servername = "localhost:3306";
+        $username="jugaad";
+        $password="VNIT@123";
+        $dbname="Jugaad18";
+        $conn=mysqli_connect($servername, $username,$password,$dbname);
         $result=mysqli_query($conn, "SELECT * FROM `3` UNION ALL
 SELECT * FROM `4` UNION ALL
 SELECT * FROM `5`");
