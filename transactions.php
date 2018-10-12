@@ -4,7 +4,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-
+    error_reporting(E_ERROR | E_PARSE);
 
     $email=$_POST['emailexpo'];
 
@@ -47,7 +47,7 @@ $body = "You have received a new message from your website contact form.\n\n"."H
 $host = "ssl://sharedlinux.cloudhostdns.net";
 $port = "465";
 $username = "noreply@ecellvnit.org";          //your mail id
-$password = "VNIT@123";                      //password of this mail id
+$password = "Ecellvnit123@";                      //password of this mail id
 
 $headers = array ('From' => $from,
 'To' => $to,
@@ -78,7 +78,7 @@ $body = "Thank You $name for Contacting us.\n\nWe will surely contact you soon.\
 $host = "ssl://sharedlinux.cloudhostdns.net";
 $port = "465";
 $username = "noreply@ecellvnit.org";          //your mail id
-$password = "VNIT@123";                      //password of this mail id
+$password = "Ecellvnit123@";                      //password of this mail id
 
 $headers = array ('From' => $from,
 'To' => $to,
@@ -119,7 +119,7 @@ echo("<p>" . $mail->getMessage() . "</p>");
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
 	    <meta name="google-site-verification" content="gXeMBX--H7xSFeawu77WYuSIYyuZQdkI4YQQnV0Hf_Y" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>E-CELL | VNIT</title>
+        <title>Jugaad'18 |E-CELL | VNIT</title>
         <meta name="keywords" content="Ecell, vnit, E-cell VNIT, entreprenuship cell, consortium 18, 2018, consortium'18, vnit consortium" />
         <meta name="description" content="E-Cell VNIT aims to promote and develop entrepreneurship culture amongst the students. Throughout the year, we
                         conduct various events, workshops and speaker
@@ -166,91 +166,26 @@ echo("<p>" . $mail->getMessage() . "</p>");
     <!-- Body -->
     <body id="main">
 
-        <!--========== HEADER ==========-->
-        <header class="navbar-fixed-top s-header js__header-sticky js__header-overlay">
-            <!-- Navbar -->
-            <div class="s-header__navbar">
-                <div class="s-header__container">
-                    <div class="s-header__navbar-row">
-                        <div class="s-header__navbar-row-col">
-                            <!-- Logo -->
-                            <div class="s-header__logo">
-                                <a href="#" class="s-header__logo-link">
-                                    <img class="s-header__logo-img s-header__logo-img-default" src="img/logo-ecell.png" alt="Ecell Logo">
-                                    <img class="s-header__logo-img s-header__logo-img-shrink" src="img/logo-ecell-sm.png" alt="Ecell Logo">
-                                </a>
-                            </div>
-                            <!-- End Logo -->
-                        </div>
-                        <div class="s-header__navbar-row-col">
-                            <!-- Trigger -->
-                            <a href="javascript:void(0);" class="s-header__trigger js__trigger">
-                                <span class="s-header__trigger-icon"></span>
-                                <svg x="0rem" y="0rem" width="3.125rem" height="3.125rem" viewbox="0 0 54 54">
-                                    <circle fill="transparent" stroke="#fff" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
-                                </svg>
-                            </a>
-                            <!-- End Trigger -->
-                        </div>
-                    </div>
-                </div>
+        <?php include("header.php");?>
+
+        <!--========== PROMO BLOCK ==========-->
+        <div class="g-bg-position--center js__parallax-window" style="background: black 50% 0 no-repeat fixed;">
+            <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
+                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">Transaction Details</h1>
             </div>
-            <!-- End Navbar -->
-
-            <!-- Overlay -->
-            <div class="s-header-bg-overlay js__bg-overlay" id="overlay">
-                <!-- Nav -->
-                <nav class="s-header__nav js__scrollbar">
-                    <div class="container-fluid">
-
-                        <!-- Menu List -->
-                        <ul class="list-unstyled s-header__nav-menu">
-                            <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="#about">About</a></li>
-                            <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="team.php">Team</a></li>
-                            <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="#flagship">Events</a></li>
-                            <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="spons.php">Sponsors</a></li>
-				<li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="https://consortium.ecellvnit.org">Consortium'18</a></li>
-
-                            <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="#contact">Contact Us</a></li>
-                        </ul>
-                        <!-- End Menu List -->
-                    </div>
-                </nav>
-                <!-- End Nav -->
-
-
-                <!-- Action -->
-                <ul class="list-inline s-header__action s-header__action--rb">
-                    <li class="s-header__action-item">
-                        <a class="s-header__action-link" href=" https://m.facebook.com/vnitecell/">
-                            <i class="g-padding-r-5--xs ti-facebook"></i>
-                            <span class="g-display-none--xs g-display-inline-block--sm">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="s-header__action-item">
-                        <a class="s-header__action-link" href="https://twitter.com/ecell_vnit">
-                            <i class="g-padding-r-5--xs ti-twitter"></i>
-                            <span class="g-display-none--xs g-display-inline-block--sm">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="s-header__action-item">
-                        <a class="s-header__action-link" href=" https://www.instagram.com/ecellvnit/">
-                            <i class="g-padding-r-5--xs ti-instagram"></i>
-                            <span class="g-display-none--xs g-display-inline-block--sm">Instagram</span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- End Action -->
-            </div>
-            <!-- End Overlay -->
-        </header>
-        <!--========== END HEADER ==========-->
+        </div>
+        <!--========== END PROMO BLOCK ==========-->
 
         <!--========== PAGE CONTENT ==========-->
         <div class="container" id="mainpage">
-    <div class="well2" style="text-align:center">
-    <h1 >Transaction Details</h1>
+    <div class="container g-padding-y-10--xs g-padding-y-40--sm">
+            <div class="col-md-12 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
+                    <div class="wow fadeInLeft g-text-center--xs" data-wow-duration=".3" data-wow-delay=".3s">
+                        <h2 class="g-font-size-32--xs g-font-size-36--sm g-font-size-36--md ">Transaction Details</h2>
+                    </div>
+            </div>
     </div>
+
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
 
@@ -394,9 +329,9 @@ echo("<p>" . $mail->getMessage() . "</p>");
 </div>
 
 
-      <section class="well">
-    <div class="form-group">
-
+    <section class="form-control s-form-v2__input g-radius--50">
+        <div class="col-lg-4">
+            <div class="form-group">
                <input type="text" class="form-control" name="details" placeholder="Details" required>
             </div>
             <div class="form-group">
@@ -405,11 +340,8 @@ echo("<p>" . $mail->getMessage() . "</p>");
             <div class="form-group">
                 <input type="number" class="form-control"  name="outflow"  placeholder="outflow" required>
             </div>
-            <br>
-            <br>
-            <div class="right">
-
-        </section>
+        </div>
+    </section>
 
 
 
