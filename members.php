@@ -16,13 +16,20 @@ $SIZE = $_SESSION['SIZE'];
             <!--========== PROMO BLOCK ==========-->
         <div class="g-bg-position--center js__parallax-window" style="background: black 50% 0 no-repeat fixed;">
             <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
-                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">MEMBER DETAILS</h1>
+                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">
+
+                    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'):?>
+                    MEMBER DETAILS
+                    <?php else:?>
+                    505 ERROR!!
+                    <?php endif;?>
+                </h1>
             </div>
         </div>
         <!--========== END PROMO BLOCK ==========-->
 
 <div class="container" style="background:#eee;">
-
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
     <form class="form-horizontal" method ="post" action="submit.php">
         <div class="container" style="margin-top:50px">
             <div class="row">
@@ -75,6 +82,10 @@ $SIZE = $_SESSION['SIZE'];
             </div>
         </div>
     </form>
+    <?php else:?>
+    <p style="text-align: center; margin-top:60px"> Kindly Select the Team Size First!!</p>
+    <p style="text-align: center; margin-top:50px;"><a href="http://jugaad.ecellvnit.org">GO BACK</a></p>
+    <?php endif;?>
 
 </div>
 <?php include("footer.php");?>
