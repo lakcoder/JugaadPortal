@@ -93,7 +93,7 @@ if(isset($_POST['SIZE'])){
                     </div>
                     <div class="col-md-7 col-md-offset-1">
                         <p class="g-font-size-18--xs g-color--dark">Jugaad is the ability to produce awesome products out of anything. To ignite this spirit, E-Cell organises an event called 'JUGAAD' at <span class="g-font-size-18--xs g-color--dark"><a href="http://vnit.ac.in/"class="g-color--primary" style="text-decoration:underline;">Visvesvaraya National Institute of Technology</a></span> where the partcipipants use their skills, resources, languages and a solid understanding of time to make ginormous profits. </p>
-                        <p class="g-font-size-18--xs g-color--dark">Participants are given an initial base investment of INR 100. Teams have full freedom to use that money whichever way they like, to earn maximum profits, through legal means. The event lets participants think different conducts to earn money which have at times resulted in beautiful ideas and products. THe winners of the event are given exciting goodies and an internship opportunity at an esteemed organisation. </p>
+                        <p class="g-font-size-18--xs g-color--dark">Participants are given an initial base investment of INR 100. Teams have full freedom to use that money whichever way they like, to earn maximum profits, through legal means. The event lets participants think different conducts to earn money which have at times resulted in beautiful ideas and products. The winners of the event are given exciting goodies and an internship opportunity at an esteemed organisation. </p>
                     </div>
                 </div>
             </div>
@@ -102,25 +102,17 @@ if(isset($_POST['SIZE'])){
         <!-- End About -->
         <div style="position:relative;height:0;padding-bottom:56.24%"><iframe src="https://www.youtube.com/embed/cy9fyghGN6k?ecver=2&controls=0&showinfo=0&modestbranding=1&vq=highres&rel=0" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-
-
         <!--========== END PROMO BLOCK ==========-->
 
         <!--========== PAGE CONTENT ==========-->
 
-
-
-
-
-
-        <div class="container g-padding-y-10--xs g-padding-y-40--sm" id="register">
+        <div class="container g-padding-y-10--xs g-padding-y-40--sm flagship" id="register">
             <div class="col-md-12 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
                     <div class="wow fadeInLeft g-text-center--xs" data-wow-duration=".3" data-wow-delay=".3s">
-                        <h2 class="g-font-size-32--xs g-font-size-36--sm g-font-size-36--md ">Register <span class="g-color--primary">Now</span></h2>
+                        <h2 class="g-font-size-32--xs g-font-size-36--sm g-font-size-36--md ">Register Now</span></h2>
                     </div>
             </div>
             <div class="row">
-
 
                     <div class="col-lg-4"></div>
                     <div class="well col-lg-4" style="padding:40px!important;margin-top:30px!important">
@@ -140,11 +132,11 @@ if(isset($_POST['SIZE'])){
                                     <input type="submit" name="insert" value="NEXT" class="btn btn-info" style="text-align: center">
                                 </div>
                             </div>
+                            <p class="g-font-size-20--xs g-color--black"><a href="/include/media/jugaad_information_booklet.pdf">Download Brochure</a></p>
                         </form>
                     </div>
                     <div class="col-lg-4"></div>
-
-        </div>
+                </div>
         </div>
 
         <!-- Feedback Form -->
@@ -181,6 +173,105 @@ if(isset($_POST['SIZE'])){
             </div>
         </div>
         <!-- End Feedback Form -->
+
+        <!-- Sponsors -->
+
+        <div class="jugaad">
+                <div class="g-text-center--xs g-margin-b-40--xs">
+                    <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Partners</p>-->
+                    <h2 class="g-font-size-24--xs g-font-size-36--md g-color--white">Our Sponsors</h2>
+                </div>
+                <div class="container g-padding-y-40--xs g-padding-y-40--sm" id="partners">
+                    <!-- Swiper Clients -->
+                    <div class="container" id="foot">
+                        <div class="row">
+
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                    <img class="s-clients-v1" src="img/clients/Make_In_India.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <img class="s-clients-v1" src="img/clients/TiE.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".4s">
+                                    <img class="s-clients-v1" src="img/clients/CIVN.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
+                                    <img class="s-clients-v1" src="img/clients/pmyuva.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".2s">
+                                    <img class="s-clients-v1" src="img/clients/digital-india.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
+                                    <img class="s-clients-v1" src="img/clients/vnit_aa.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Swiper Clients -->
+                </div>
+            </div>
+        <!-- End Sponsors -->
+
+        <!-- Patronage -->
+            <div class="footer">
+                <div class="g-text-center--xs g-margin-b-40--xs">
+                    <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Partners</p>-->
+                    <h2 class="g-font-size-24--xs g-font-size-36--md g-color--white">Under patronage of</h2>
+                </div>
+                <div class="container g-padding-y-40--xs g-padding-y-40--sm" id="partners">
+                    <!-- Swiper Clients -->
+                    <div class="container" id="foot">
+                        <div class="row">
+
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                    <img class="s-clients-v1" src="img/clients/Make_In_India.png" alt="Clients Logo">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <img class="s-clients-v1" src="img/clients/TiE.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".4s">
+                                    <img class="s-clients-v1" src="img/clients/CIVN.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
+                                    <img class="s-clients-v1" src="img/clients/pmyuva.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".2s">
+                                    <img class="s-clients-v1" src="img/clients/digital-india.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-6">
+                                <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
+                                    <img class="s-clients-v1" src="img/clients/vnit_aa.png" alt="Clients Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Swiper Clients -->
+                </div>
+            </div>
+            <!-- End Patronage -->
 
         <!--========== END PAGE CONTENT ==========-->
 
