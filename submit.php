@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+// Start the session
+session_start();
+$SIZE = $_SESSION['SIZE'];
+
+?>
 <?php
 $servername = "localhost:3306";
 $username="jugaad";
@@ -12,8 +17,8 @@ $EMAIL="";
 
 $UNIQUE="";
 $PREFIX="J18";
-$teamsize="4";
-
+$teamsize=$SIZE;
+error_reporting(E_ERROR | E_PARSE);
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -21,7 +26,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 try{
     $conn =mysqli_connect($servername,$username,$password,$dbname);
 }catch(MySQLi_Sql_Exception $ex){
-    echo("error in connecting");
+    echo("<p>Error in connecting</p>");
 }
 
 if (isset($_POST["submit"])){
@@ -84,9 +89,9 @@ All members can approach the organizers for doubts and/or assistance.";
     $mail = $smtp->send($to, $headers, $body);
 
 }
-$myFile = "$UNIQUE.php"; // or .php
+$myFile = "$SIZE/$UNIQUE.php"; // or .php
 $fh = fopen($myFile, 'w'); // or die("error");
-$stringData = file_get_contents("../transactions.php");
+$stringData = file_get_contents("transactions.php");
 fwrite($fh, $stringData);
 fclose($fh);
 
@@ -109,53 +114,54 @@ $profitquery=mysqli_query($conn,"INSERT into `profit` (UNIQUE_ID, TEAMNAME, PROF
 
 
 
-
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="JUGAAD'17 REGISTRATION">
-    <meta name="author" content="Vipul Wairagade">
-    <title>JUGAAD'17</title>
-    <link href="../img/logo%20vnit.png" rel="shortcut icon">
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<?php include("head.php");?>
 
-<body>
-<div class="container" >
-    <div class="well">
-        <h4 style="text-align:center">Your Form Submitted Successfully</h4>
-        <p style="text-align: center;">Further Details and Instructions have been mailed to you.<br>ALL THE BEST !!!
-            <?php
-            if (PEAR::isError($mail)) {
-                echo("<p>" . $mail->getMessage() . "</p>");
-            } else {
-                echo'<p style="text-align: center;">Mail successfully sent</p>';
-            }
+<body id="main">
+    <?php include("header.php");?>
 
-            if ($tablequery) {
-                echo '<p style="text-align: center;">Transaction Link created successfully</p>';
-            } else {
-                echo "Error creating Transaction Link: " . mysqli_error($conn);
-            }
-            if ($query) {
-                echo '<p style="text-align: center;">Transaction of RS 100 done Successfully</p>';
-            } else {
-                echo("Error description: " . mysqli_error($conn));
-                echo '<p>Error In doing Transaction</p>';
-            }
-
-            mysqli_close($conn);
-            ?>
-
-        </p>
+            <!--========== PROMO BLOCK ==========-->
+    <div class="g-bg-position--center js__parallax-window" style="background: black 50% 0 no-repeat fixed;">
+        <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
+            <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">Submitted Successfully!!</h1>
+        </div>
     </div>
-</div>
-<!-- jQuery -->
-<script src="../vendor/jquery/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--========== END PROMO BLOCK ==========-->
+    <div class="container" >
+        <div style="width:100%; background:#fff;padding:60px 50px">
+            <p style="text-align: center; margin-top:20px;">Further Details and Instructions have been mailed to you.<br>ALL THE BEST !!!
+                <?php
+                if (PEAR::isError($mail)) {
+                    // echo("<p>" . $mail->getMessage() . "</p>");
+                    echo'<p style="text-align: center;margin-top:10px;">Facing errors while sending mail, please contact our registration desk</p>';
+                } else {
+                    echo'<p style="text-align: center;margin-top:10px;">Mail successfully sent</p>';
+                }
+
+                if ($tablequery) {
+                    echo '';
+                } else {
+                    echo "Error creating Transaction Link: " . mysqli_error($conn);
+                }
+                if ($query) {
+                    echo '<a href="http://jugaad.ecellvnit.org">GO BACK</a>';
+                } else {
+                    echo("Error description: " . mysqli_error($conn));
+                    echo '<p>Error</p>';
+                }
+
+                mysqli_close($conn);
+                ?>
+
+            </p>
+        </div>
+    </div>
+    <?php include("footer.php");?>
+    <?php include("scripts.php");?>
 </body>
 </html>

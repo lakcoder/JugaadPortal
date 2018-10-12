@@ -23,7 +23,7 @@ $SIZE = $_SESSION['SIZE'];
 
 <div class="container" style="background:#eee;">
 
-    <form class="form-horizontal" method ="post" action="<?php echo($SIZE)?>/submit.php">
+    <form class="form-horizontal" method ="post" action="submit.php">
         <div class="container" style="margin-top:50px">
             <div class="row">
                 <div class="  col-lg-4 "></div>
