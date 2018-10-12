@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <body style="width:100%; background-color:#fff; padding:50px 30px; color:1e1e1e; margin-top:100px;font-family:Helvetica,Arial,sans-serif">
             <div style="background-color:#000;width:90%;  padding:10px 30px;"><img src="https://www.ecellvnit.org/img/logo-ecell.png"></div>
                 <div style="width:90%; background-color:#f7f9fb; padding:50px 30px;color: #212121;">
-                    <h3><b>Hello'.$name.',</b></h3>
-                    <p style="font-size:18px;">Thank You for registering with us. Your Unique ID is <b>'.$UNIQUE.'</b><br>Your Unique Link is <a href="http://jugaad.ecellvnit.org/'.$UNIQUE.php.'">here!</a></p>
+                    <h3><b>Hello '.$name.',</b></h3>
+                    <p style="font-size:18px;">Thank You for registering with us. Your Unique ID is <b>'.$UNIQUE.'</b><br>Your Unique Link is <a href="http://jugaad.ecellvnit.org/'.$UNIQUE.'.php">here!</a></p>
 
                 </div>
                 <div style="padding:60px 30px; width:90%;color: #212121;">
