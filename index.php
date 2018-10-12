@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 if ( isset( $_POST['submitexpo'] ) ) {
     $con = mysqli_connect("localhost:3306", "conso", "Conso123@", "conso");
     if (mysqli_connect_errno()) {
@@ -17,7 +20,8 @@ if ( isset( $_POST['submitexpo'] ) ) {
 <?php
 if(isset($_POST['SIZE'])){
     $SIZE=$_POST['SIZE'];
-    header('Location: /'.$_POST['SIZE']);
+    $_SESSION['SIZE'] = $SIZE;
+    header('Location: /members.php');
     exit;
 }
 
@@ -184,7 +188,7 @@ if(isset($_POST['SIZE'])){
         <?php include("footer.php");?>
         <!--========== END FOOTER ==========-->
 
-        </div>
+        <!--</div>-->
 
         <?php include("scripts.php");?>
 
