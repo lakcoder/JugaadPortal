@@ -106,7 +106,7 @@ if(isset($_POST['SIZE'])){
 
         <!--========== PAGE CONTENT ==========-->
 
-        <div class="container g-padding-y-10--xs g-padding-y-40--sm flagship" id="register">
+        <div class="container g-padding-y-10--xs g-padding-y-40--sm " id="register">
             <div class="col-md-12 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
                     <div class="wow fadeInLeft g-text-center--xs" data-wow-duration=".3" data-wow-delay=".3s">
                         <h2 class="g-font-size-32--xs g-font-size-36--sm g-font-size-36--md ">Register Now</span></h2>
@@ -138,41 +138,6 @@ if(isset($_POST['SIZE'])){
                     <div class="col-lg-4"></div>
                 </div>
         </div>
-
-        <!-- Feedback Form -->
-        <div class="g-bg-color--sky-light" id="contact">
-            <div class="container g-padding-y-0--xs g-padding-y-0--sm">
-                <div class="g-text-center--xs g-margin-b-40--xs">
-                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Contact</p>
-                    <h2 class="g-font-size-32--xs g-font-size-36--md">Mail Us</h2>
-                </div>
-                <form method="post" action="">
-                    <div class="row g-margin-b-40--xs">
-                        <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
-                            <div class="g-margin-b-20--xs">
-                                <input type="text" name="name" class="form-control s-form-v2__input g-radius--50" placeholder="* Name">
-                            </div>
-                            <div class="g-margin-b-20--xs">
-                                <input type="email" name="email" class="form-control s-form-v2__input g-radius--50" placeholder="* Email">
-                            </div>
-                            <input type="text" name="phone" class="form-control s-form-v2__input g-radius--50" placeholder="* Phone">
-                        </div>
-                        <div class="col-sm-6">
-                            <textarea class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs" rows="8" name="message" placeholder="* Your message"></textarea>
-                        </div>
-                    </div>
-                    <div class="g-text-center--xs">
-                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs">Submit</button>
-                    </div>
-                </form>
-                <div class="g-text-center--xs" id="confirm"></div>
-                <div class="g-text-center--xs g-margin-b-40--xs">
-                    <br><br>
-                    <p class="text-uppercase g-font-size-14--xs g-color--dark g-font-weight--400 g-letter-spacing--2 g-margin-b-25--xs">Or Need Any Help? Contact: <a href="team.php">Team</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- End Feedback Form -->
 
         <!-- Sponsors -->
 
@@ -222,6 +187,41 @@ if(isset($_POST['SIZE'])){
                 </div>
             </div>
         <!-- End Sponsors -->
+        <!-- Feedback Form -->
+        <div class="g-bg-color--sky-light" id="contact">
+            <div class="container g-padding-y-0--xs g-padding-y-0--sm">
+                <div class="g-text-center--xs g-margin-b-40--xs">
+                    <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Contact</p>
+                    <h2 class="g-font-size-32--xs g-font-size-36--md">Mail Us</h2>
+                </div>
+                <form method="post" action="">
+                    <div class="row g-margin-b-40--xs">
+                        <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
+                            <div class="g-margin-b-20--xs">
+                                <input type="text" name="name" class="form-control s-form-v2__input g-radius--50" placeholder="* Name">
+                            </div>
+                            <div class="g-margin-b-20--xs">
+                                <input type="email" name="email" class="form-control s-form-v2__input g-radius--50" placeholder="* Email">
+                            </div>
+                            <input type="text" name="phone" class="form-control s-form-v2__input g-radius--50" placeholder="* Phone">
+                        </div>
+                        <div class="col-sm-6">
+                            <textarea class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs" rows="8" name="message" placeholder="* Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="g-text-center--xs">
+                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs">Submit</button>
+                    </div>
+                </form>
+                <div class="g-text-center--xs" id="confirm"></div>
+                <div class="g-text-center--xs g-margin-b-40--xs">
+                    <br><br>
+                    <p class="text-uppercase g-font-size-14--xs g-color--dark g-font-weight--400 g-letter-spacing--2 g-margin-b-25--xs">Or Need Any Help? Contact: <a href="team.php">Team</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End Feedback Form -->
+
 
         <!-- Patronage -->
             <div class="footer">

@@ -11,7 +11,7 @@ $CONTACT="";
 $EMAIL="";
 
 $UNIQUE="";
-$PREFIX="J17";
+$PREFIX="J18";
 $teamsize="4";
 
 
@@ -32,7 +32,7 @@ if (isset($_POST["submit"])){
         $data2 = mysqli_real_escape_string($conn,$_POST['college'][$index]);
         $data3 = mysqli_real_escape_string($conn,$_POST['contact'][$index]);
         $data4 = mysqli_real_escape_string($conn,$_POST['email'][$index]);
-        mysqli_query($conn, "INSERT INTO `4` (`UNIQUE_ID` ,`TEAMNAME`,`NAME`, `COLLEGE`, `CONTACT`, `EMAIL`) VALUES ('$UNIQUE','$TEAMNAME','$data1', '$data2', '$data3', '$data4')") or die(mysqli_error($conn));
+        mysqli_query($conn, "INSERT INTO `$teamsize` (`UNIQUE_ID` ,`TEAMNAME`,`NAME`, `COLLEGE`, `CONTACT`, `EMAIL`) VALUES ('$UNIQUE','$TEAMNAME','$data1', '$data2', '$data3', '$data4')") or die(mysqli_error($conn));
     }
 }
 
@@ -69,7 +69,7 @@ All members can approach the organizers for doubts and/or assistance.";
     $host = "ssl://sharedlinux.cloudhostdns.net";
     $port = "465";
     $username = "noreply@ecellvnit.org";          //your mail id
-    $password = "Ecellvnit123@";                      //password of this mail id
+    $password = "VNIT@123";                      //password of this mail id
 
     $headers = array('From' => $from,
         'To' => $to,
