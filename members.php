@@ -1,7 +1,10 @@
-<?php
-// Start the session
-session_start();
-$SIZE = $_SESSION['SIZE'];
+<?php session_start();
+$check = false;
+if(isset($_SESSION['SIZE'])){
+    $SIZE = $_SESSION['SIZE'];
+    $check = true;
+}
+
 
 ?>
 <html>
@@ -18,7 +21,7 @@ $SIZE = $_SESSION['SIZE'];
             <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
                 <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">
 
-                    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'):?>
+                    <?php if ($check):?>
                     MEMBER DETAILS
                     <?php else:?>
                     505 ERROR!!
@@ -29,7 +32,7 @@ $SIZE = $_SESSION['SIZE'];
         <!--========== END PROMO BLOCK ==========-->
 
 <div class="container" style="background:#eee;">
-    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+    <?php if ($check): ?>
     <form class="form-horizontal" method ="post" action="submit.php">
         <div class="container" style="margin-top:50px">
             <div class="row">

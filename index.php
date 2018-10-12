@@ -1,6 +1,13 @@
-<?php
-session_start();
+<?php session_start();
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $SIZE=htmlspecialchars($_POST['SIZE']);
+    $_SESSION['SIZE'] = $SIZE;
+    header('Location: members.php');
+    exit;
+}
 ?>
+
 <?php
 if ( isset( $_POST['submitexpo'] ) ) {
     $con = mysqli_connect("localhost:3306", "conso", "Conso123@", "conso");
@@ -17,15 +24,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
 }
 ?>
 
-<?php
-if(isset($_POST['SIZE'])){
-    $SIZE=$_POST['SIZE'];
-    $_SESSION['SIZE'] = $SIZE;
-    header('Location: /members.php');
-    exit;
-}
 
-?>
 
 
 <!DOCTYPE html>
@@ -34,7 +33,6 @@ if(isset($_POST['SIZE'])){
     <?php include("head.php");?>
     <!-- Body -->
     <body id="main">
-
 
         <?php include("header.php");?>
         <!--========== PROMO BLOCK ==========-->
