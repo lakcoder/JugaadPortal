@@ -2,28 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="JUGAAD TEAM PROFIT">
-    <meta name="author" content="Vipul Wairagade">
-    <title>TEAM PROFIT</title>
-    <link href="" rel="shortcut icon">
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
-    <!--
-    <style>
-        table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
-        table.db-table th	{ background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-        table.db-table td	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-
-    </style> -->
 
 </head>
+<?php include("head.php");?>
 
-<body>
+<body id= "main">
 
+
+<!--========== PROMO BLOCK ==========-->
+        <div class="g-bg-position--center js__parallax-window" style="background: black 50% 0 no-repeat fixed;">
+            <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
+                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">Team Profit</h1>
+            </div>
+        </div>
+        <!--========== END PROMO BLOCK ==========-->
 <table class="table" id="myTable">
     <thead>
     <tr>

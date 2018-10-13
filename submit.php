@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div style="background-color:#000;width:90%;  padding:10px 30px;"><img src="https://www.ecellvnit.org/img/logo-ecell.png"></div>
                 <div style="width:90%; background-color:#f7f9fb; padding:50px 30px;color: #212121;">
                     <h3><b>Hello '.$name.',</b></h3>
-                    <p style="font-size:18px;">Thank You for registering with us. Your Unique ID is <b>'.$UNIQUE.'</b><br>Your Unique Link is <a href="http://jugaad.ecellvnit.org/'.$UNIQUE.'.php">here!</a></p>
+                    <p style="font-size:18px;">Thank You for registering with us. Your Unique ID is <b>'.$UNIQUE.'</b><br></p>
 
                 </div>
                 <div style="padding:60px 30px; width:90%;color: #212121;">
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <div style="padding:50px 30px; width:90%;color:#fff; background-color:#1e1e1e;">
                     <h5>Contact Us</h5>
                     <p>Lakshya Shukla<br>
-                    (Event Head)</p>
+                    (Event Manager)</p>
                     <p>+91 77384 46941</p>
                     <p>or</p>
                     <p>Mail Us: contact@ecellvnit.org</p>

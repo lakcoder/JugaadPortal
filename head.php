@@ -17,12 +17,8 @@
 	    <meta name="google-site-verification" content="gXeMBX--H7xSFeawu77WYuSIYyuZQdkI4YQQnV0Hf_Y" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>JUGAAD'18 | E-CELL | VNIT</title>
-        <meta name="keywords" content="Ecell, vnit, E-cell VNIT, entreprenuship cell, consortium 18, 2018, consortium'18, vnit consortium" />
-        <meta name="description" content="E-Cell VNIT aims to promote and develop entrepreneurship culture amongst the students. Throughout the year, we
-                        conduct various events, workshops and speaker
-                        sessions sessions for inspiring and assisting young
-                        entrepreneurs in their journey in the world of
-                        business">
+        <meta name="keywords" content="Ecell, vnit, E-cell VNIT, entreprenuship cell, consortium 18, 2018, consortium'18, Jugaad, Jugaad 18" />
+        <meta name="description" content="Jugaad is an annual event organised by Ecell VNIT which aims to create an inexorable spirit of entrepreneurship amongst students, with the freshmen as particular consideration for the Club. It aims to function as a guide in the form of a fun event for students with creative ideas which can be transformed into successful street level transactions.">
         <meta name="author" content="Sagar Bansal">
 
         <!-- Web Fonts -->
