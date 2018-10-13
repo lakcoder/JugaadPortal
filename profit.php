@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    $welcomeMessage = "Welcome to the databse, " . $_SESSION['username'] . "!";
+} else {
+    header('Location: login_profit.php');
+}
+?>
 <html lang="en">
 
 <head>

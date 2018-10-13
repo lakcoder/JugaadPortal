@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    $welcomeMessage = "Welcome to the databse, " . $_SESSION['username'] . "!";
+} else {
+    header('Location: login_database.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
