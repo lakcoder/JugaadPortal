@@ -58,6 +58,9 @@ if(isset($_SESSION['SIZE'])){
             <div class="form-group">
                 <select class="form-control s-form-v2__input g-radius--50" name="college[]" required>
                     <option value="">COLLEGE</option>
+                    <option value="PRIYADARSHINI COLLEGE OF ENGINEERING">PRIYADARSHINI COLLEGE OF ENGINEERING</option>
+                    <option value="HISLOP COLLEGE">HISLOP COLLEGE</option>
+                    <option value="GOVERNMENT COLLEGE OF ENGINEERING">GOVERNMENT COLLEGE OF ENGINEERING</option>
                     <option value="SHREE RAMDEOBABA COLLEGE OF ENGINEERING AND MANAGEMENT">SHREE RAMDEOBABA COLLEGE OF ENGINEERING AND MANAGEMENT</option>
                     <option value="INDIAN INSTITUTE OF INFORMATION TECHNOLOGY">INDIAN INSTITUTE OF INFORMATION TECHNOLOGY</option>
                     <option value="YESHWANTRAO CHAVAN COLLEGE OF ENGINEERING">YESHWANTRAO CHAVAN COLLEGE OF ENGINEERING</option>

@@ -69,7 +69,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".5s">
                             <a href=#register>
                                 <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-arrow-right"></i>
-                                <span class="text-uppercase g-font-size-13--xs g-color--white g-padding-x-15--xs"><b>Register Now</b></span>
+                                <span class="text-uppercase g-font-size-25--xs g-color--white g-padding-x-15--xs"><b>Register Now</b></span>
                             </a>
                         </div>
                     </div>
@@ -151,32 +151,32 @@ if ( isset( $_POST['submitexpo'] ) ) {
 
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                    <img class="s-clients-v1" src="img/clients/Make_In_India.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/swiggy.png" alt="Swiggy Logo">
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".3s">
-                                    <img class="s-clients-v1" src="img/clients/TiE.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/radio_mirchi.jpg" alt="Radio Mirchi Logo">
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".4s">
-                                    <img class="s-clients-v1" src="img/clients/CIVN.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/simple_crm.png" alt="Simple CRM Logo">
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
-                                    <img class="s-clients-v1" src="img/clients/pmyuva.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/madfries.png" alt="Madfries Logo">
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".2s">
-                                    <img class="s-clients-v1" src="img/clients/digital-india.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/ictrd.jpg" alt="ICTRD Logo">
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-6">
                                 <div class="wow fadeIn" data-wow-duration=".3" data-wow-delay=".5s">
-                                    <img class="s-clients-v1" src="img/clients/vnit_aa.png" alt="Clients Logo">
+                                    <img class="s-clients-v1" src="img/clients/saboo_home_decor.jpg" alt="Saboo Home Decor Logo">
                                 </div>
                             </div>
                         </div>
