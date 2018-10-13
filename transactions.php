@@ -263,9 +263,10 @@
                 }
 
                 $conn=mysqli_connect("localhost:3306", "jugaad","VNIT@123","Jugaad18");
-                $result=mysqli_query($conn, "SELECT * FROM $filename");
+                $q = "SELECT * FROM '".mysqli_escape_string($conn,$filename)."'";
+                $result=mysqli_query($conn, $q);
 
-                while ($row = mysqli_fetch_assoc("$result")):
+                while ($row = mysqli_fetch_assoc($result)):
                 ?>
                     <tr>
                         <td><?php echo $row['reg_date'];?></td>
