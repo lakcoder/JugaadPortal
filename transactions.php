@@ -263,7 +263,7 @@
                 }
 
                 $conn=mysqli_connect("localhost:3306", "jugaad","VNIT@123","Jugaad18");
-                $q = "SELECT * FROM '".mysqli_escape_string($conn,$filename)."'";
+                $q = "SELECT * FROM '$filename'";
                 $result=mysqli_query($conn, $q);
 
                 while ($row = mysqli_fetch_assoc($result)):
