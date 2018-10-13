@@ -145,10 +145,10 @@
                          // output data of each row
                          while($row = $result->fetch_assoc()) {
                              $inflow =$row['total_inflow'];
-                             echo "<p>Total inflow  is : " . $row["total_inflow"]."</p>";
+                             echo "<p style='text-align:center'>Total inflow  is : " . $row["total_inflow"]."</p>";
                          }
                      } else {
-                         echo "<p>Total inflow  is : 0</p>";
+                         echo "<p style='text-align:center'>Total inflow  is : 0</p>";
                      }
 
                      $sql = "SELECT SUM(outflow) AS total_outflow FROM $filename";
@@ -162,7 +162,7 @@
                              echo nl2br("\nTotal outflow  is : " . $row["total_outflow"]);
                          }
                      } else {
-                         echo "<p>Total outflow  is : 0</p>";
+                         echo "<p style='text-align:center'>Total outflow  is : 0</p>";
                      }
 
                      $PROFIT= $inflow - $outflow;
@@ -176,7 +176,7 @@
 
                 ?>
                 </div>
-                <div class="row">
+                <div class="row" style="padding-top:40px;">
                     <div class="col-lg-6 col-lg-offset-3">
                         <h5 style="text-align:center;">MAKE A ENTRY</h5>
                         <br>
