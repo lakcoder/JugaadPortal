@@ -105,7 +105,7 @@
     <head>
         <!--<link rel="stylesheet" href="transactions.css">-->
         <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/transactions.css">
+        <!--<link rel="stylesheet" href="css/transactions.css">-->
         <!-- Bootstrap Core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
@@ -126,16 +126,16 @@
         <!--========== END PROMO BLOCK ==========-->
 
         <!--========== PAGE CONTENT ==========-->
-        <div class="container" id="mainpage">
+        <div class="container" id="mainpage" style="background:#f5f5f5; padding:40px 20px;">
 
 
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
 
-
+                <div style="text-align:center; background:#fff; padding:40px;" >
                 <?php
                      $filename=basename(__FILE__, '.php');
-                   $name=basename(__FILE__);
+                  $name=basename(__FILE__);
                      $con=mysqli_connect("localhost:3306", "jugaad","VNIT@123","Jugaad18");
 
                      $sql = "SELECT SUM(inflow) AS total_inflow FROM $filename";
@@ -145,10 +145,10 @@
                          // output data of each row
                          while($row = $result->fetch_assoc()) {
                              $inflow =$row['total_inflow'];
-                             echo "Total inflow  is : " . $row["total_inflow"];
+                             echo "<p>Total inflow  is : " . $row["total_inflow"]."</p>";
                          }
                      } else {
-                         echo "0 results";
+                         echo "<p>Total inflow  is : 0</p>";
                      }
 
                      $sql = "SELECT SUM(outflow) AS total_outflow FROM $filename";
@@ -162,26 +162,47 @@
                              echo nl2br("\nTotal outflow  is : " . $row["total_outflow"]);
                          }
                      } else {
-                         echo "0 results";
+                         echo "<p>Total outflow  is : 0</p>";
                      }
 
-                     $PROFIT= $inflow-$outflow;
+                     $PROFIT= $inflow - $outflow;
                      echo nl2br("\nProfit is $PROFIT");
 
                  	$query=mysqli_query($con," UPDATE profit
                               SET PROFIT = '$PROFIT'
-                           WHERE UNIQUE_ID = '$filename'");
+                          WHERE UNIQUE_ID = '$filename'");
 
 
 
                 ?>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <h5 style="text-align:center;">MAKE A ENTRY</h5>
+                        <br>
+                        <div class="form-group">
+                           <input type="text" class="form-control s-form-v2__input g-radius--50" name="details" placeholder="Details" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control s-form-v2__input g-radius--50"  name="inflow"  placeholder="inflow" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control s-form-v2__input g-radius--50"  name="outflow"  placeholder="outflow" required>
+                        </div>
+                        <div style="margin-top:40px; text-align:center;">
+                            <button type="submit" value="submit" name="form_submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
             </form>
 
         </div>
 
-        <div class="container">
+        <div class="container" style="padding:40px;">
 
             <table class="table" id="myTable">
                 <thead>
@@ -244,7 +265,7 @@
                 $conn=mysqli_connect("localhost:3306", "jugaad","VNIT@123","Jugaad18");
                 $result=mysqli_query($conn, "SELECT * FROM $filename");
 
-                while ($row = mysqli_fetch_assoc($result)):
+                while ($row = mysqli_fetch_assoc("$result")):
                 ?>
                     <tr>
                         <td><?php echo $row['reg_date'];?></td>
@@ -254,9 +275,6 @@
                         <td><?php echo $row['OUTFLOW'];?></td>
                     </tr>
 
-
-
-
                     <?php endwhile; ?>
                 </tbody>
             </table>
@@ -265,25 +283,7 @@
         </div>
 
 
-        <section class="form-control s-form-v2__input g-radius--50">
-            <div class="col-lg-4">
-                <div class="form-group">
-                   <input type="text" class="form-control" name="details" placeholder="Details" required>
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control"  name="inflow"  placeholder="inflow" required>
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control"  name="outflow"  placeholder="outflow" required>
-                </div>
-            </div>
-        </section>
 
-
-
-        <div class="right">
-            <button type="submit" value="submit" name="form_submit" class="btn btn-primary">Submit</button>
-        </div>
         <?php include("footer.php"); ?>
 
 
