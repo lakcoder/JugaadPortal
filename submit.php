@@ -146,9 +146,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     $tablequery=mysqli_query($conn, $sql);
 
-    $query = mysqli_query($conn, "INSERT into $UNIQUE (DETAILS, INFLOW, OUTFLOW ) values('Investment by E-cell','0','100')");
+    $query = mysqli_query($conn, "INSERT into $UNIQUE (DETAILS, INFLOW, OUTFLOW ) values('Investment by E-cell','100','0')");
 
-    $profitquery=mysqli_query($conn,"INSERT into `profit` (UNIQUE_ID, TEAMNAME, PROFIT ) values('$UNIQUE','$TEAMNAME','-100')");
+    $profitquery=mysqli_query($conn,"INSERT into `profit` (UNIQUE_ID, TEAMNAME, PROFIT ) values('$UNIQUE','$TEAMNAME','100')");
 }
 ?>
 
