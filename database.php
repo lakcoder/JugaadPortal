@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    $welcomeMessage = "Welcome to the databse, " . $_SESSION['username'] . "!";
+if (isset($_SESSION['auth']) && $_SESSION['auth'] == true) {
+    $welcomeMessage = "Welcome to the databse!";
 } else {
-    header('Location: login_database.php');
+    header('Location: login_auth.php');
 }
 ?>
 <!DOCTYPE html>
@@ -76,55 +76,6 @@ SELECT * FROM `5`");
         ?>
     </tbody>
 </table>
-
-
- <!-- this is old code an be used later -->
-<!--
-echo '<table id="myTable" cellpadding="0" cellspacing="0" class="db-table">';
-echo "<tr><th>ID_NO</th><th>NAME</th><th>ROLL_NO</th><th>BRANCH</th></tr>";
-
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-        parent::__construct($it, self::LEAVES_ONLY);
-    }
-
-    function current() {
-        return "<td>" . parent::current(). "</td>";
-    }
-
-    function beginChildren() {
-        echo "<tr>";
-    }
-
-    function endChildren() {
-        echo "</tr>" . "\n";
-    }
-}
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "VNIT";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT ID_NO, NAME,ROLL_NO,BRANCH FROM mytable");
-    $stmt->execute();
-
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-        echo $v;
-    }
-}
-catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-$conn = null;
-echo "</table>";
-?> -->
 
 
 <!-- DataTables -->

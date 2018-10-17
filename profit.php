@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    $welcomeMessage = "Welcome to the databse, " . $_SESSION['username'] . "!";
+if (isset($_SESSION['auth']) && $_SESSION['auth'] == true) {
+    $welcomeMessage = "Welcome!";
 } else {
-    header('Location: login_profit.php');
+    header('Location: login_auth.php');
 }
 ?>
 <html lang="en">
