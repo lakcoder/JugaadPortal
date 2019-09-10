@@ -17,9 +17,9 @@ if(isset($_SESSION['SIZE'])){
 
 
             <!--========== PROMO BLOCK ==========-->
-        <div class="g-bg-position--center js__parallax-window" style="background: black 50% 0 no-repeat fixed;">
+        <div class="g-bg-position--center js__parallax-window" style="background: #ffe6cc 50% 0 no-repeat fixed;">
             <div class="g-container--md g-text-center--xs g-padding-y-100--xs">
-                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">
+                <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--brown g-letter-spacing--1">
 
                     <?php if ($check):?>
                     MEMBER DETAILS
@@ -31,7 +31,20 @@ if(isset($_SESSION['SIZE'])){
         </div>
         <!--========== END PROMO BLOCK ==========-->
 
-<div class="container" style="background:#eee;">
+<div class="container" style="background:#f2f2f2;">
+  <h2 style="text-align: center"><b><monospaced>Registration Centre</monospaced></b></h2>
+  <div class="form-group">
+      <select class="form-control s-form-v2__input g-radius--50" name="college[]" required>
+          <option value="">COLLEGE</option>
+          <option value="Centre">1</option>
+          <option value="Centre">2</option>
+          <option value="Centre">3</option>
+          <option value="Centre">4</option>
+          <option value="Centre">5</option>
+          <option value="OTHER">OTHER</option>
+      </select>
+
+  </div>
     <?php if ($check): ?>
     <form class="form-horizontal" method ="post" action="submit.php">
         <div class="container" style="margin-top:50px">
@@ -54,6 +67,7 @@ if(isset($_SESSION['SIZE'])){
                 <input class="form-control s-form-v2__input g-radius--50" type="text" name="name[]" placeholder="NAME" required>
 
             </div>
+
             <br>
             <div class="form-group">
                 <select class="form-control s-form-v2__input g-radius--50" name="college[]" required>
@@ -82,6 +96,13 @@ if(isset($_SESSION['SIZE'])){
         </div>
         <?php endfor; ?>
         </div>
+
+
+
+          <br>
+
+
+
         <div class="row">
             <div class="col-sm-12 text-center">
                 <input type="submit" name="submit" value="REGISTER" class="btn btn-info" style="text-align: center">

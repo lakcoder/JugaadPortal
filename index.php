@@ -30,6 +30,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
+
     <?php include("head.php");?>
     <!-- Body -->
     <body id="main">
@@ -104,6 +105,68 @@ if ( isset( $_POST['submitexpo'] ) ) {
 
         <!--========== PAGE CONTENT ==========-->
 
+
+
+        <div class="container-fluid">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="slideshow/1.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="slideshow/2.jpg" alt="Chicago" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="slideshow/3.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="container g-padding-y-10--xs g-padding-y-40--sm " id="register">
             <div class="col-md-12 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
                     <div class="wow fadeInLeft g-text-center--xs" data-wow-duration=".3" data-wow-delay=".3s">
@@ -128,7 +191,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
                             <br>
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <input type="submit"  disabled name="insert" value="NEXT" class="btn btn-info" style="text-align: center">
+                                    <input type="submit" name="insert" value="NEXT" class="btn btn-info" style="text-align: center">
                                 </div>
                             </div>
                             <p class="g-font-size-20--xs g-color--black"><a href="/include/media/jugaad_information_booklet.pdf">Download Brochure</a></p>
