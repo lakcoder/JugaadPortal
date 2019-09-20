@@ -128,7 +128,7 @@ if ( isset( $_POST['submitexpo'] ) ) {
                             <br>
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <input type="submit"  disabled name="insert" value="NEXT" class="btn btn-info" style="text-align: center">
+                                    <input type="submit" name="insert" value="NEXT" class="btn btn-info" style="text-align: center">
                                 </div>
                             </div>
                             <p class="g-font-size-20--xs g-color--black"><a href="/include/media/jugaad_information_booklet.pdf">Download Brochure</a></p>

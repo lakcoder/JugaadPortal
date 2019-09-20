@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     //connect to mysql database
     try{
-        $conn =mysqli_connect($servername,$username,$password,$dbname);
+        $conn = mysqli_connect($servername,$username,$password,$dbname);
     }catch(MySQLi_Sql_Exception $ex){
         echo("<p>Error in connecting</p>");
     }
@@ -44,15 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         }
     }
 
-    require_once "Mail.php";
+    require "vendor/autoload.php";
+    $mail = new PHPMailer(TRUE);
+
     foreach ($_POST['email'] as $index => $email) {
         $name=$_POST['name'][$index];
 
-
-        $from = "E-CELL VNIT <noreply@ecellvnit.org>";    //your mail id
-        $to = $email;
-        $subject = "Registration successful";
-        $body = '
+      try{
+        $mail->setFrom('jitendra98rahamgdale@gmail.com', 'Jitendra');
+        $mail->addAddress($email, $name);
+        $mail->Subject = 'Welcome to Jugaad';
+        $mail->isHTML (TRUE);
+        $mail->Body = '
         <!DOCTYPE html>
         <html>
             <head>
@@ -107,26 +110,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             </body>
         </html>';
 
-        $host = "ssl://sharedlinux.cloudhostdns.net";
-        $port = "465";
-        $username = "noreply@ecellvnit.org";          //your mail id
-        $password = "VNIT@123";                      //password of this mail id
+        // $host = "ssl://sharedlinux.cloudhostdns.net";
+        // $port = "465";
+        // $username = "noreply@ecellvnit.org";          //your mail id
+        // $password = "VNIT@123";                      //password of this mail id
+        //
+        // $headers = array('MIME-Version' => '1.0rn',
+        //     'Content-Type' => "text/html; charset=ISO-8859-1rn",
+        //     'From' => $from,
+        //     'To' => $to,
+        //     'Subject' => $subject);
+        // $smtp = Mail::factory('smtp',
+        //     array('host' => $host,
+        //         'port' => $port,
+        //         'auth' => true,
+        //         'username' => $username,
+        //         'password' => $password));
 
-        $headers = array('MIME-Version' => '1.0rn',
-            'Content-Type' => "text/html; charset=ISO-8859-1rn",
-            'From' => $from,
-            'To' => $to,
-            'Subject' => $subject);
-        $smtp = Mail::factory('smtp',
-            array('host' => $host,
-                'port' => $port,
-                'auth' => true,
-                'username' => $username,
-                'password' => $password));
-
-        $mail = $smtp->send($to, $headers, $body);
-
+      $mail->send();
     }
+    catch (Exception $e)
+    {
+       echo $e->errorMessage();
+    }
+    catch (\Exception $e)
+    {
+       echo $e->getMessage();
+    }
+  }
     $myFile = "$UNIQUE.php"; // or .php
     $fh = fopen($myFile, 'w'); // or die("error");
     $stringData = file_get_contents("transactions.php");
