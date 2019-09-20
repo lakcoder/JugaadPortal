@@ -1,9 +1,14 @@
 <?php
 // Start the session
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 $SIZE = $_SESSION['SIZE'];
 
 ?>
+
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -11,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $servername = "localhost:3306";
     $username="jugaad";
     $password="VNIT@123";
-    $dbname="Jugaad18";
+    $dbname="Jugaad19";
 
     $NAME="";
     $COLLEGE="";
@@ -19,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $EMAIL="";
 
     $UNIQUE="";
-    $PREFIX="J18";
+    $PREFIX="J19";
     $teamsize=$SIZE;
     error_reporting(E_ERROR | E_PARSE);
 
@@ -31,31 +36,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     }catch(MySQLi_Sql_Exception $ex){
         echo("<p>Error in connecting</p>");
     }
+    mysqli_query($conn, "CREATE TABLE IF NOT EXISTS profit(UNIQUE_ID varchar(255), TEAMNAME varchar(255),profit varchar(255))");
 
     if (isset($_POST["submit"])){
         $UNIQUE=uniqid($PREFIX);
         $TEAMNAME=$_POST['teamname'];
+        if($teamsize == 3){$teamsize = 'Three';}
+        if($teamsize == 4){$teamsize = 'Four';}
+        if($teamsize == 5){$teamsize = 'Five';}
+        mysqli_query($conn, "CREATE TABLE IF NOT EXISTS $teamsize(UNIQUE_ID varchar(255), TEAMNAME varchar(255),NAME varchar(255), COLLEGE varchar(255), CONTACT varchar(255),EMAIL varchar(255))");
         foreach ($_POST['name'] as $index => $name) {
             $data1 = mysqli_real_escape_string($conn,$name);
+            $data4 = mysqli_real_escape_string($conn,$_POST['email'][$index]);
             $data2 = mysqli_real_escape_string($conn,$_POST['college'][$index]);
             $data3 = mysqli_real_escape_string($conn,$_POST['contact'][$index]);
-            $data4 = mysqli_real_escape_string($conn,$_POST['email'][$index]);
-            mysqli_query($conn, "INSERT INTO `$teamsize` (`UNIQUE_ID` ,`TEAMNAME`,`NAME`, `COLLEGE`, `CONTACT`, `EMAIL`) VALUES ('$UNIQUE','$TEAMNAME','$data1', '$data2', '$data3', '$data4')") or die(mysqli_error($conn));
+            mysqli_query($conn, "INSERT INTO $teamsize(`UNIQUE_ID` ,`TEAMNAME`,`NAME`, `COLLEGE`, `CONTACT`, `EMAIL`) VALUES ('$UNIQUE','$TEAMNAME','$data1', '$data2', '$data3', '$data4')") or die(mysqli_error($conn));
         }
     }
 
-    require "vendor/autoload.php";
-    $mail = new PHPMailer(TRUE);
-
+    require_once "Mail.php";
     foreach ($_POST['email'] as $index => $email) {
         $name=$_POST['name'][$index];
-
-      try{
-        $mail->setFrom('jitendra98rahamgdale@gmail.com', 'Jitendra');
-        $mail->addAddress($email, $name);
-        $mail->Subject = 'Welcome to Jugaad';
-        $mail->isHTML (TRUE);
-        $mail->Body = '
+        $from = "E-CELL VNIT <noreply@ecellvnit.org>";    //your mail id
+        $to = $email;
+        $subject = "Registration successful";
+        $body = '
         <!DOCTYPE html>
         <html>
             <head>
@@ -73,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <div style="width:90%; background-color:#f7f9fb; padding:50px 30px;color: #212121;">
                     <h3><b>Hello '.$name.',</b></h3>
                     <p style="font-size:18px;">Thank You for registering with us. Your Unique ID is <b>'.$UNIQUE.'</b><br></p>
-
                 </div>
                 <div style="padding:60px 30px; width:90%;color: #212121;">
                     <h4>Team Guidelines for Jugaad 18\'</h4>
@@ -104,39 +108,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                     <p>+91 77384 46941</p>
                     <p>or</p>
                     <p>Mail Us: contact@ecellvnit.org</p>
-
                 </div>
-
             </body>
         </html>';
+        $host = "ssl://sharedlinux.cloudhostdns.net";
+        $port = "465";
+        $username = "noreply@ecellvnit.org";          //your mail id
+        $password = "VNIT@123";                      //password of this mail id
+        $headers = array('MIME-Version' => '1.0rn',
+            'Content-Type' => "text/html; charset=ISO-8859-1rn",
+            'From' => $from,
+            'To' => $to,
+            'Subject' => $subject);
+        $smtp = Mail::factory('smtp',
+            array('host' => $host,
+                'port' => $port,
+                'auth' => true,
+                'username' => $username,
+                'password' => $password));
+        $mail = $smtp->send($to, $headers, $body);
+    }
 
-        // $host = "ssl://sharedlinux.cloudhostdns.net";
-        // $port = "465";
-        // $username = "noreply@ecellvnit.org";          //your mail id
-        // $password = "VNIT@123";                      //password of this mail id
-        //
-        // $headers = array('MIME-Version' => '1.0rn',
-        //     'Content-Type' => "text/html; charset=ISO-8859-1rn",
-        //     'From' => $from,
-        //     'To' => $to,
-        //     'Subject' => $subject);
-        // $smtp = Mail::factory('smtp',
-        //     array('host' => $host,
-        //         'port' => $port,
-        //         'auth' => true,
-        //         'username' => $username,
-        //         'password' => $password));
-
-      $mail->send();
-    }
-    catch (Exception $e)
-    {
-       echo $e->errorMessage();
-    }
-    catch (\Exception $e)
-    {
-       echo $e->getMessage();
-    }
   }
     $myFile = "$UNIQUE.php"; // or .php
     $fh = fopen($myFile, 'w'); // or die("error");
